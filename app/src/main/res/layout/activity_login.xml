@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor">
+
+    <!--用户名、密码输入框-->
+   <LinearLayout
+       android:id="@+id/login_ll"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:layout_margin="30dp"
+       android:orientation="vertical"
+       android:focusable="true"
+       android:focusableInTouchMode="true"
+       >
+       <!--用户名-->
+       <EditText
+           android:id="@+id/login_name"
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:layout_marginBottom="12dp"
+           android:paddingLeft="12dp"
+           android:hint="用户名"
+           android:maxLines="1"
+           android:textColor="@android:color/white"
+           android:textColorHint="#e0e0e0"
+           android:textSize="18sp"
+           android:gravity="center"
+           android:background="@drawable/my_layout_style5"
+           android:drawableLeft="@drawable/username"/>
+       <!--密码-->
+       <EditText
+           android:id="@+id/login_pwd"
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:paddingLeft="12dp"
+           android:hint="密  码"
+           android:inputType="textPassword"
+           android:maxLines="1"
+           android:textColor="@android:color/white"
+           android:textColorHint="#e0e0e0"
+           android:textSize="18sp"
+           android:gravity="center"
+           android:background="@drawable/my_layout_style5"
+           android:drawableLeft="@drawable/pwd"/>
+   </LinearLayout>
+
+    <!--头像-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/login_ll">
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logo"
+            android:layout_centerInParent="true"
+            android:transitionName="ivSharedHead"
+            />
+    </RelativeLayout>
+
+
+    <!--登陆按钮-->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/selector_button"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_ll"
+        android:onClick="onLogin"
+        />
+
+    <CheckBox
+        android:id="@+id/cbRememberPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_marginLeft="30dp"
+        android:text="记住密码"
+        android:textColor="#ffffff"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_checkbox"
+        android:drawablePadding="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+        <!--间隔线-->
+        <TextView
+            android:id="@+id/login_bottom_line"
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:background="#ffffff"/>
+        <!--忘记密码-->
+        <TextView
+            android:id="@+id/tvFindBackPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:text="忘记密码"
+            android:textColor="#ffffff"
+            android:layout_toLeftOf="@id/login_bottom_line"/>
+        <!--点击跳转注册-->
+        <TextView
+            android:id="@+id/to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前往注册账号"
+            android:textColor="#FF5B00"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/login_bottom_line"
+            android:layout_marginLeft="20dp"
+            android:onClick="gotoRegister"
+            android:background="@drawable/my_layout_style5"/>
+    </RelativeLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:SpinKit_Style="Circle"
+        android:id="@+id/duringLoadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>

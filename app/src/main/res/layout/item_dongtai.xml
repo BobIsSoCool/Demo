@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="15dp">
+
+   <LinearLayout
+       android:id="@+id/llLeft"
+       android:layout_width="wrap_content"
+       android:layout_height="110dp"
+       android:orientation="vertical">
+
+       <View
+           android:id="@+id/viewTop"
+           android:layout_width="2dp"
+           android:layout_height="25dp"
+           android:layout_gravity="center_horizontal"
+           android:background="?attr/bgColor"/>
+
+       <RelativeLayout
+           android:layout_width="24dp"
+           android:layout_height="24dp"
+           android:background="@drawable/circle_bg_2">
+           <View
+               android:layout_width="10dp"
+               android:layout_height="10dp"
+               android:layout_centerInParent="true"
+               android:background="@drawable/circle_bg"/>
+       </RelativeLayout>
+
+
+       <View
+           android:id="@+id/viewBottom"
+           android:layout_width="2dp"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:layout_gravity="center_horizontal"
+           android:background="?attr/bgColor"/>
+
+   </LinearLayout>
+
+    f<TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/llLeft"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="此处应有一条动态"
+        android:textSize="16sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017-3-26"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_below="@id/tvContent"
+        android:layout_toRightOf="@id/llLeft"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_yuan_jiao"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d4d4d4"
+        android:layout_marginBottom="15dp"/>
+    <EditText
+        android:id="@+id/etPingLun"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:lines="3"
+        android:hint="请输入评论..."
+        android:gravity="top"
+        android:textSize="14sp"
+        android:background="@drawable/shape_pinglun_bg"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tvPingLun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="发表评论"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/shape_bg_guanzhu"/>
+
+</LinearLayout>

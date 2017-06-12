@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.evecom.activity">
+
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--请求访问使用照相设备-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 向SD卡中创建或者删除的权限。 -->
+    <uses-permission android:name="andorid.permission.MONUN_UNMOUNT_FILESYSTEMS"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--SplashActivity（欢迎页面）-->
+        <activity android:name=".SplashActivity">
+            <!--默认进入-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--GuideActivity（引导页面）-->
+        <activity android:name=".GuidActivity"></activity>
+
+        <!--LoginActivity（登录页面）-->
+        <activity android:name=".LoginActivity">
+
+        </activity>
+
+        <!--Register（注册界面）-->
+        <activity android:name=".RegisterActivity"/>
+
+        <!--MainActivity（主页面）-->
+        <activity android:name=".MainActivity"></activity>
+
+        <!--WriteArticleActivity(文章编辑页面)-->
+        <activity android:name=".WriteArticleActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
+
+        <!--文章显示-->
+        <activity android:name=".ShowArticleActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!--个人信息界面-->
+        <activity android:name=".PersonalInfoActivity"/>
+
+        <!--修改个人信息界面-->
+        <activity android:name=".EditPersonalInfoActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!--我的收藏界面-->
+        <activity android:name=".MyCollectionActivity"/>
+
+        <!--找回密码界面-->
+        <activity android:name=".FindBackPassword"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!--聊天界面-->
+        <activity android:name=".ChatActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+    </application>
+
+</manifest>

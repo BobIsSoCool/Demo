@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义主题1-->
+    <style name="CustomStyleOne" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="bgColor">#009688</item>
+        <item name="bgAddImage">@drawable/icon_add_image_theme1</item>
+    </style>
+
+    <!--自定义主题2-->
+    <style name="CustomStyleTwo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bgColor">#CD5555</item>
+        <item name="bgAddImage">@drawable/icon_add_image_theme2</item>
+    </style>
+
+    <!--自定义主题3-->
+    <style name="CustomStyleThree" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bgAddImage">@drawable/icon_add_image_theme3</item>
+        <item name="bgColor">#E0B66C</item>
+    </style>
+
+    <!--自定义主题4-->
+    <style name="CustomStyleFour" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bgColor">#313638</item>
+        <item name="bgAddImage">@drawable/icon_add_image_theme4</item>
+    </style>
+
+    <!--自定义主题5-->
+    <style name="CustomStyleFive" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bgColor">#5C7148</item>
+        <item name="bgAddImage">@drawable/icon_add_image_theme5</item>
+    </style>
+
+    <!--自定义主题6-->
+    <style name="CustomStyleSix" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bgColor">#708090</item>
+        <item name="bgAddImage">@drawable/icon_add_image_theme6</item>
+    </style>
+
+    <!--自定义主题7-->
+    <style name="CustomStyleSeven" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bgColor">#784E3B</item>
+        <item name="bgAddImage">@drawable/icon_add_image_theme7</item>
+    </style>
+</resources>

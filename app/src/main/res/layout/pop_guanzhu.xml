@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="80dp"
+    android:background="@drawable/icon_qipao"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/tvChat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="私聊"
+        android:textColor="#ffffff" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff" />
+
+    <TextView
+        android:id="@+id/tvCancelGuanzhu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="取关"
+        android:textColor="#ffffff" />
+
+
+</LinearLayout>

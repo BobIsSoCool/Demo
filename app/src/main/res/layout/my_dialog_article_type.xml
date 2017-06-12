@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11ffffff">
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/free_dialog_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:gravity="center"
+            android:text="选择分类"
+            android:textColor="#38ADFF"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#009688" />
+
+        <RadioGroup
+            android:id="@+id/rgArticleType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbTypeOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分类一"
+                android:textColor="#000000"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp"/>
+
+            <RadioButton
+                android:id="@+id/rbTypeTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分类二"
+                android:textColor="#000000"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp"/>
+
+            <RadioButton
+                android:id="@+id/rbTypeThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分类三"
+                android:textColor="#000000"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp"/>
+
+            <RadioButton
+                android:id="@+id/rbTypeFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分类四"
+                android:textColor="#000000"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp"/>
+
+            <RadioButton
+                android:id="@+id/rbTypeFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分类五"
+                android:textColor="#000000"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp"/>
+
+            <RadioButton
+                android:id="@+id/rbTypeSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分类六"
+                android:textColor="#000000"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp"/>
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#E4E4E4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:text="取消"
+                android:textColor="#666666"/>
+
+
+
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/tvPublish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:text="发布"
+                android:textColor="#666666"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

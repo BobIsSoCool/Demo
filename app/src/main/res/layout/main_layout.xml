@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_hight"
+        android:background="?attr/bgColor"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--主页面底部按钮组，用于切换页面-->
+    <RadioGroup
+        android:id="@+id/rg_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="?attr/bgColor"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="热文"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:drawableTop="@drawable/radiobutton1_img"
+            />
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="说说"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:drawableTop="@drawable/radiobutton2_img"/>
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="消息"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:drawableTop="@drawable/radiobutton3_img"
+            />
+    </RadioGroup>
+
+    <!--主页面，帧布局-->
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_main_bottom"
+        android:background="#ffffff">
+    </FrameLayout>
+
+
+    <!--悬浮于主页面的原形头像-->
+    <com.evecom.myview.MyCircleImage
+        android:id="@+id/openSideMenuImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/default_avatar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:transitionName="ivSharedHead">
+
+    </com.evecom.myview.MyCircleImage>
+
+    <ImageView
+        android:id="@+id/write_article"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_write_article"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="9dp"
+        android:onClick="writeArticle"/>
+
+    </RelativeLayout>
+</LinearLayout>

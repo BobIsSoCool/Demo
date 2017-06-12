@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义属性：背景颜色-->
+    <attr name="bgColor" format="color|reference"/>
+    <!--添加图片图标-->
+    <attr name="bgAddImage" format="color|reference"/>
+</resources>

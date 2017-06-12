@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/rewen_toprl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="?attr/bgColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="热文"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <!--viewpager分页指示器-->
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/mIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_below="@id/rewen_toprl"
+        android:layout_centerHorizontal="true">
+    </net.lucode.hackware.magicindicator.MagicIndicator>
+    
+    <!--分割线-->
+    <TextView
+        android:id="@+id/rewen_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d4d4d4"
+        android:layout_below="@id/mIndicator"/>
+    
+    <!--viewpager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/rewen_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rewen_line">
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

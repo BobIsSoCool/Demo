@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--顶部标题栏-->
+    <RelativeLayout
+        android:id="@+id/tz_toprl"
+       android:layout_width="match_parent"
+       android:layout_height="48dp"
+       android:background="?attr/bgColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="说说"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <!--说说列表(TODO:后续加上下拉刷新)-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tz_toprl">
+        <ListView
+            android:id="@+id/lvShuoShuo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#d4d4d4"
+            android:dividerHeight="10dp"
+            >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llLodingView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/shape_loding_bg"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:SpinKit_Style="Circle"
+            app:SpinKit_Color="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="发布中..."
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/circle_bg"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.5"
+        >
+        <!--发布帖子图标-->
+        <ImageView
+            android:id="@+id/ivAddShuoShuo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_write_shuoshuo"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

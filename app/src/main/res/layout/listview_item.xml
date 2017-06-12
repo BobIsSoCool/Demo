@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp"
+    android:background="@android:color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/ivFaceImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/default_head" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/ivFaceImage"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/rl_itemtop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+           >
+
+            <com.evecom.myview.MyCircleImage
+                android:id="@+id/ivAvatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/default_avatar"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tvAuthorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/ivAvatar"
+                android:text="作者昵称"
+                android:textColor="#009688"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tvPublishDate"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_toRightOf="@id/tvAuthorName"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text="发布时间"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvArticleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="文章标题"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical"/>
+        <RelativeLayout
+            android:id="@+id/rl_itembottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            >
+            <CheckBox
+                android:id="@+id/cbZan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:button="@null"
+                android:background="@drawable/selector_zan"
+                android:checked="false"/>
+            <TextView
+                android:id="@+id/tvDianZanCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cbZan"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:textColor="#666666"
+                android:text="点赞数"
+                android:textSize="12sp"/>
+            <ImageView
+                android:id="@+id/ivPingLun"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tvDianZanCount"
+                android:src="@drawable/icon_pinglun" />
+            <TextView
+                android:id="@+id/tvPingLun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivPingLun"
+                android:gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:text="评论数"
+                android:paddingLeft="8dp"
+                android:textColor="#666666"
+                android:textSize="12sp"/>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

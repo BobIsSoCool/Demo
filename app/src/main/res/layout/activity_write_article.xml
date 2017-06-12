@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--顶部操作栏-->
+    <LinearLayout
+        android:id="@+id/write_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/status_hight"
+            android:background="#203a3c3b"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <!--返回图标-->
+            <ImageView
+                android:id="@+id/click_article_backto_main"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back"
+                android:onClick="backtoMain"/>
+            <!--发布-->
+            <TextView
+                android:id="@+id/tvPublishArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="发布"
+                android:textColor="#ffffff"
+                android:background="@drawable/shape_ban_tou_ming_right"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--分割线1-->
+    <TextView
+        android:id="@+id/article_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/write_top_rl"
+        android:background="#d4d4d4"/>
+
+    <!--标题-->
+    <EditText
+        android:id="@+id/etArticleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@id/write_top_rl"
+        android:background="@null"
+        android:hint="请输入标题..."
+        android:maxLines="2"
+        android:textSize="18sp"/>
+
+    <!--分割线2-->
+    <TextView
+        android:id="@+id/article_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@id/etArticleTitle"
+        android:background="#d4d4d4"/>
+
+    <!--图文混编控件，编辑文章、插入图片-->
+    <com.sendtion.xrichtext.RichTextEditor
+        android:id="@+id/richTextEditor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:layout_below="@id/article_line2">
+
+    </com.sendtion.xrichtext.RichTextEditor>
+
+    <!--点击插入图片-->
+    <!--在外面加一层ScrollView，当软键盘弹出时，
+    添加图片的图标随着上移-->
+    <ScrollView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <ImageView
+            android:id="@+id/click_to_addImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_add_image_theme6"
+            />
+    </ScrollView>
+
+   <LinearLayout
+       android:id="@+id/llLoadingView2"
+       android:layout_width="120dp"
+       android:layout_height="120dp"
+       android:padding="15dp"
+       android:layout_centerInParent="true"
+       android:orientation="vertical"
+       android:visibility="gone"
+       android:background="@drawable/shape_loding_bg"
+       >
+
+       <com.github.ybq.android.spinkit.SpinKitView
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="15dp"
+           app:SpinKit_Style="FoldingCube"
+           app:SpinKit_Color="#ffffff"
+           android:layout_gravity="center_horizontal"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="文章生成中..."
+           android:textSize="18sp"
+           android:textColor="#ffffff"
+           android:layout_gravity="center_horizontal"
+           android:gravity="center"/>
+
+   </LinearLayout>
+
+</RelativeLayout>

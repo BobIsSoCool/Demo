@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="15dp">
+
+        <com.evecom.myview.MyCircleImage
+            android:id="@+id/ivAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_avatar"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/ivAvatar"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="昵称"
+                android:textSize="16sp"
+                android:gravity="bottom"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="2017-4-7"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:gravity="top"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_delete"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="16sp"
+        android:text="说说内容"></TextView>
+
+    <TextView
+        android:id="@+id/tvZhuanFaContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="16sp"
+        android:text="转发的内容"
+        android:background="#F8F8F8"
+        android:visibility="gone"></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/ivZhuanFa"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_zhuan_fa"/>
+
+        <TextView
+            android:id="@+id/tvPingLunCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:paddingLeft="8dp"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivZhuanFa"
+            android:layout_marginRight="15dp"/>
+
+        <ImageView
+            android:id="@+id/ivPingLun"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_pinglun"
+            android:layout_toLeftOf="@id/tvPingLunCount"/>
+
+        <TextView
+            android:id="@+id/tvDianZanCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_toLeftOf="@id/ivPingLun"
+            android:text="0"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbZan"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:button="@null"
+            android:background="@drawable/selector_zan"
+            android:layout_toLeftOf="@id/tvDianZanCount"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d4d4d4"/>
+
+    <!--评论列表-->
+    <ListView
+        android:id="@+id/lvPingLun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"></ListView>
+
+</LinearLayout>
